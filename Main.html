@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eldoria Fashion House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    header {
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #888;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      margin-top: 100px;
+      width: 100%;
+      height: 90vh;
+      background: url('./assets/images/img1.jpg') center/cover no-repeat;
+      display:flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 60px;
+      color: white;
+    }
+
+    .hero h1 { font-size: 64px; max-width: 500px; line-height: 1.1; font-weight: 700; color: #000; }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 14px 32px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #222;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #e3e3e3;
+    }
+
+    /* COLLECTIONS */
+    .collections {
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .collections h2 {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .item {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .item img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .item h3 {
+      font-size: 22px;
+      padding: 20px;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 80px;
+      padding: 40px 60px;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+  @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    nav a {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .cube-image-container img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">Eldoria</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+      <a href="#royal">Royal Wear</a>
+      <a href="#armory">Armory</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Redefining Comfort. Elevating Style.</h1>
+      <button>Explore Now</button>
+    </div>
+  </section>
+
+  <!-- ROYAL WEAR SECTION -->
+  <section class="collections" id="royal">
+    <h2>Royal Wear</h2>
+    <div class="grid">
+      <div class="item">
+        <img src="./assets/images/img5.jpg" />
+        <h3>Royal Cloaks</h3>
+      </div>
+      <div class="item">
+        <img src="./assets/images/img4.jpg" />
+        <h3>Medieval Gowns</h3>
+      </div>
+      <div class="item">
+        <img src="./assets/images/img3.jpg" />
+        <h3>Royal Tunics</h3>
+      </div>
+      <div class="item">
+        <img src="./assets/images/img2.jpg" />
+        <h3>Elegant Noble Suit</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARMORY SECTION -->
+  <section class="collections" id="armory">
+    <h2>Armory Collection</h2>
+    <div class="grid">
+      <div class="item">
+        <img src="./assets/images/img8.jpg" />
+        <h3>Warrior Armor</h3>
+      </div>
+      <div class="item">
+        <img src="./assets/images/img7.jpg" />
+        <h3>Steel Breastplates</h3>
+      </div>
+      <div class="item">
+        <img src="./assets/images/img6.jpg" />
+        <h3>Knight Sets</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="collections"" id="collections">
+    <h2>Featured Collections</h2>
+    <div class="grid">
+      <div class="item">
+        <img src="./assets/images/img10.jpg" />
+        <h3>Winter Essentials</h3>
+      </div>
+      <div class="item">
+        <img src="./assets/images/img9.jpg" />
+        <h3>Luxury Sets</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Eldoria Fashion House. All rights reserved.</p>
+    <p>Designed with style & simplicity.</p>
+  
+
+  <!-- ABOUT SECTION -->
+  <section class="collections" id="about">
+    <h2>About Eldoria</h2>
+    <p style="max-width:700px;margin:0 auto;font-size:18px;line-height:1.6;color:#000;">
+      Eldoria is a timeless fashion house inspired by medieval elegance and royal artistry. Our garments
+      combine ancient craftsmanship with modern sophistication, creating pieces worthy of nobility.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="collections" id="contact">
+    <h2>Contact Us</h2>
+    <p style="font-size:18px;color:#000;">Email: support@eldoria.com</p>
+    <p style="font-size:18px;color:#000;">Phone: +27 82 123 4567</p>
+  </section>
+
+</footer>
+</body>
+</html>
